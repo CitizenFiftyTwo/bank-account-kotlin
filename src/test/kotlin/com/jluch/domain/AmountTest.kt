@@ -17,7 +17,7 @@ class AmountTest {
             "42.524, 42.52",
             "42.525, 42.53",
     )
-    @DisplayName(value = "amountOf should instantiate amount with scale of 2")
+    @DisplayName(value = "Amount.Of should instantiate amount with scale of 2")
     fun `amountOf is ok`(inputValue: BigDecimal, expectedValue: BigDecimal) {
         val amount = Amount.of(inputValue)
 
