@@ -30,6 +30,27 @@ class AccountTest {
         assertThat(accountAfterDeposit.balance).isEqualTo(Amount(expectedBalanceValue))
     }
 
+    @DisplayName("Withdraw should remove money from balance")
+    @ParameterizedTest(name = "Withdraw {1} in account with a balance of {0} should result with {2} in balance")
+    @CsvSource(
+            "0, 1, -1.00",
+            "42, 41, 1.00",
+            "42.5, 41, 1.50",
+            "42.5, 41.5, 1.00",
+            "42.55, 41.55, 1.00",
+            "42.55, 41.554, 1.00",
+            "42.55, 41.555, 0.99",
+    )
+    fun `withdraw money is OK`(initialBalanceValue: BigDecimal,
+                               depositAmountValue: BigDecimal,
+                               expectedBalanceValue: BigDecimal) {
+        val account = accountWithInitialAmount(initialBalanceValue)
+
+        val accountAfterWithdraw = account.withdraw(Amount.of(depositAmountValue))
+
+        assertThat(accountAfterWithdraw.balance).isEqualTo(Amount(expectedBalanceValue))
+    }
+
     private fun accountWithInitialAmount(amount: BigDecimal): Account {
         return Account(Amount.of(amount))
     }
