@@ -72,6 +72,22 @@ class AccountTest {
         )
     }
 
+    @DisplayName("Withdraw should register a withdraw operation in account")
+    @Test
+    fun `retrieveMoney should register a withdraw operation in account`() {
+        val account = accountWithInitialAmount(BigDecimal.ZERO)
+
+        val accountAfterWithdraw = account.withdraw(Amount(BigDecimal(42)))
+
+        assertThat(accountAfterWithdraw.transactions).hasSize(1)
+        assertThat(accountAfterWithdraw.transactions[0]).isEqualTo(
+            Transaction(
+                TransactionType.WITHDRAW,
+                Amount(BigDecimal(42))
+            )
+        )
+    }
+
     private fun accountWithInitialAmount(amount: BigDecimal): Account {
         return Account(
             balance = Amount.of(amount),
