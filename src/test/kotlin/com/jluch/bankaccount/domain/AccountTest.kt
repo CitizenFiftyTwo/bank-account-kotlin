@@ -1,4 +1,4 @@
-package com.jluch.domain
+package com.jluch.bankaccount.domain
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName

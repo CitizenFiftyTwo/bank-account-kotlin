@@ -1,4 +1,4 @@
-package com.jluch.domain
+package com.jluch.bankaccount.domain
 
 import java.math.BigDecimal
 import java.math.RoundingMode

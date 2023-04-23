@@ -1,4 +1,4 @@
-package com.jluch
+package com.jluch.bankaccount
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
