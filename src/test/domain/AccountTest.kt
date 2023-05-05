@@ -1,5 +1,9 @@
-package com.jluch.bankaccount.domain
+package domain
 
+import bankaccount.domain.Account
+import bankaccount.domain.Amount
+import bankaccount.domain.Transaction
+import bankaccount.domain.TransactionType
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test

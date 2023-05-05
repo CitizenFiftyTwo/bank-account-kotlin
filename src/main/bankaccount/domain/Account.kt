@@ -1,7 +1,7 @@
-package com.jluch.bankaccount.domain
+package bankaccount.domain
 
-import com.jluch.bankaccount.domain.TransactionType.DEPOSIT
-import com.jluch.bankaccount.domain.TransactionType.WITHDRAW
+import bankaccount.domain.TransactionType.DEPOSIT
+import bankaccount.domain.TransactionType.WITHDRAW
 
 data class Account(val balance: Amount, val transactions: List<Transaction>) {
 
