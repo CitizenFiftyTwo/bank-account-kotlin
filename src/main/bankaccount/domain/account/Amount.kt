@@ -1,4 +1,4 @@
-package bankaccount.domain
+package bankaccount.domain.account
 
 import java.math.BigDecimal
 import java.math.RoundingMode

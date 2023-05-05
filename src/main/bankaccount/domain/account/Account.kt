@@ -1,7 +1,7 @@
-package bankaccount.domain
+package bankaccount.domain.account
 
-import bankaccount.domain.TransactionType.DEPOSIT
-import bankaccount.domain.TransactionType.WITHDRAW
+import bankaccount.domain.account.TransactionType.DEPOSIT
+import bankaccount.domain.account.TransactionType.WITHDRAW
 
 data class Account(val balance: Amount, val transactions: List<Transaction>) {
 
