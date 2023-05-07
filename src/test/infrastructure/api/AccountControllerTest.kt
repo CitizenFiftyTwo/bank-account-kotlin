@@ -57,4 +57,22 @@ class AccountControllerTest {
 
         verify { accountAdapter.deposit(BigDecimal(24)) }
     }
+
+    @Test
+    fun `should make a withdrawal`() {
+        every { accountAdapter.withdraw(any()) } returns expectedAccount
+
+        mockMvc.perform(
+            post("/accounts/withdraw")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(BigDecimal(24).toString())
+        ).andExpect(status().isOk)
+            .andExpect(
+                content().json(
+                    jsonMapper.writeValueAsString(expectedAccount)
+                )
+            )
+
+        verify { accountAdapter.withdraw(BigDecimal(24)) }
+    }
 }

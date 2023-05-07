@@ -14,4 +14,9 @@ class AccountController(
     @ResponseStatus(HttpStatus.OK)
     fun deposit(@RequestBody amount: BigDecimal): ResponseEntity<AccountView> =
         ResponseEntity.ok(this.accountAdapter.deposit(amount))
+
+    @PostMapping("/withdraw")
+    @ResponseStatus(HttpStatus.OK)
+    fun withdraw(@RequestBody amount: BigDecimal): ResponseEntity<AccountView> =
+        ResponseEntity.ok(this.accountAdapter.withdraw(amount))
 }
