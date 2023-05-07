@@ -1,6 +1,5 @@
-package domain.account
+package bankaccount.domain.account
 
-import bankaccount.domain.account.Amount
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.params.ParameterizedTest

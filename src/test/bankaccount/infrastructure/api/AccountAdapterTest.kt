@@ -1,4 +1,4 @@
-package infrastructure.api
+package bankaccount.infrastructure.api
 
 import bankaccount.domain.account.Account
 import bankaccount.domain.account.Amount
@@ -9,9 +9,6 @@ import bankaccount.domain.command.DepositCommand
 import bankaccount.domain.command.DepositOperation
 import bankaccount.domain.command.WithdrawCommand
 import bankaccount.domain.command.WithdrawOperation
-import bankaccount.infrastructure.api.AccountAdapter
-import bankaccount.infrastructure.api.AccountView
-import bankaccount.infrastructure.api.TransactionView
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK

@@ -1,4 +1,4 @@
-package infrastructure.api
+package bankaccount.infrastructure.api
 
 import bankaccount.BankAccountApplication
 import bankaccount.infrastructure.api.*

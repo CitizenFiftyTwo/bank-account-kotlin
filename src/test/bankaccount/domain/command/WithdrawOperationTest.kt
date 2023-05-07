@@ -1,11 +1,9 @@
-package domain.command
+package bankaccount.domain.command
 
 import bankaccount.domain.account.Account
 import bankaccount.domain.account.Amount
 import bankaccount.domain.account.Transaction
 import bankaccount.domain.account.TransactionType.WITHDRAW
-import bankaccount.domain.command.WithdrawCommand
-import bankaccount.domain.command.WithdrawOperation
 import bankaccount.infrastructure.repository.InMemoryAccountRepository
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test

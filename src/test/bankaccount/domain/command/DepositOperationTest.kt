@@ -1,11 +1,9 @@
-package domain.command
+package bankaccount.domain.command
 
 import bankaccount.domain.account.Account
 import bankaccount.domain.account.Amount
 import bankaccount.domain.account.Transaction
 import bankaccount.domain.account.TransactionType.DEPOSIT
-import bankaccount.domain.command.DepositCommand
-import bankaccount.domain.command.DepositOperation
 import bankaccount.infrastructure.repository.InMemoryAccountRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
