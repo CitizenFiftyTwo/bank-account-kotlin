@@ -16,7 +16,11 @@
 	<properties>
 		<java.version>17</java.version>
 		<kotlin.version>1.7.22</kotlin.version>
+		<mockk.version>1.13.4</mockk.version>
+		<spring-mockk.version>4.0.2</spring-mockk.version>
+		<swagger.version>2.2.9</swagger.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -29,6 +33,10 @@
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-stdlib-jdk8</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
 		<dependency>
@@ -44,7 +52,13 @@
 		<dependency>
 			<groupId>io.mockk</groupId>
 			<artifactId>mockk-jvm</artifactId>
-			<version>1.13.4</version>
+			<version>${mockk.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ninja-squad</groupId>
+			<artifactId>springmockk</artifactId>
+			<version>${spring-mockk.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

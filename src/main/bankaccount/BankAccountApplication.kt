@@ -1,4 +1,4 @@
-package com.jluch.bankaccount
+package bankaccount
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class BankAccountApplication
 
 fun main(args: Array<String>) {
-	runApplication<BankAccountApplication>(*args)
+    runApplication<BankAccountApplication>(*args)
 }
